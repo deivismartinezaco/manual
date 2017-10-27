@@ -1,17 +1,17 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Manual IPUC</ion-title>
+    <ion-searchbar (ionInput)="getItems($event)" placeholder="Filtrar..." animated="true" showcancelbutton="false"></ion-searchbar>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <img style="width:150px; height:100px; align-self:center" src="assets/img/logo-header.png"/>
+  <ion-list>
+    <button ion-item  text-wrap *ngFor="let item of items" (click)="openNavDetailsPage(item)" icon-start>
+      <ion-icon [name]="item.icon" [ngStyle]="{'color': item.color}" item-start></ion-icon>
+      <p>{{ item.title }}</p>
+    </button>
+    
+  </ion-list>
 </ion-content>

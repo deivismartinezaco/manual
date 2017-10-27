@@ -1,5 +1,8 @@
 {
   "name": "manualIpuc",
-  "app_id": "",
-  "type": "ionic-angular"
+  "app_id": "a55a7ed2",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
 }
